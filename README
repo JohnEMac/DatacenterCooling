@@ -1,0 +1,8 @@
+
+The Python and C solutions of Quora's programming challenge: Datacenter Cooling
+
+See: http://www.quora.com/challenges
+
+The C-implementation solves the case 7x8 (proposed in the description of the problem, see ./tests/in7x8_301716.txt file) in 23 secs.
+When compiled with -O2 optimization, it does in 9.5 secs.
+Tested on system: Kubuntu 64bit, i5 750 @ 2.67GHz
