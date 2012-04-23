@@ -3,9 +3,28 @@ The Python, Go (GoLang), and C solutions of Quora's programming challenge: Datac
 
 See: http://www.quora.com/challenges
 
-The C-implementation solves the case 7x8 (proposed in the description of the problem, see ./tests/in7x8_301716.txt file) in 23 secs.
-When compiled with -O2 optimization, it does in 9.5 secs.
+To compare the performance of different implementations, we used 7x8 test case proposed in the description of the problem, see ./tests/in7x8_301716.txt file).
 
-Go-implementation solves the case in 42 secs.
+The development and optimization was done using Python.
+The the Python code was rewritten to C with some optimizations.
+C-code was compiled without and with "-O2" optimization.
+Go-code was first produced by rewrittng 1-1 the C-code.
+Then it was changed to make it more "idiomatic Go"
 
-Tested on system: Kubuntu 64bit, i5 750 @ 2.67GHz
+Short results:
+    C is twice fast then Go
+    C with O2 is twice fast then C compiled without optimizations.
+
+Tested desktop system: Kubuntu 64bit, i5 750 @ 2.67GHz
+
+C-code:            23 secs
+C-code, -O2:       9.5 secs
+Go-code, idomatic:
+Go-code, C-like:
+
+Tested laptop system: Uubuntu 32bit, i5 M 520 @ 2.40GHz
+
+C-code:            21 secs
+C-code, -O2:       12 secs
+Go-code, idomatic: 1m 32secs
+Go-code, C-like:   42 secs

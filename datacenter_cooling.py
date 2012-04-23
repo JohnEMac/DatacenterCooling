@@ -66,11 +66,10 @@ def build_graph(datacenter):
 # u is a destination vertex
 # checks whether the vertex u is reachable from all the vertices of L
 def connected(graph, L, u):
-    n = len(graph)
     L = L[:]
     # C[v] == 0 means it is not connected
     # for every k >= 2, {v|C[v] == k} are connected to v = L[1-k] (and between each other)
-    C = [0] * n
+    C = [0] * len(graph)
     C[u] = 1
     mark = 2
 
@@ -155,7 +154,7 @@ def search(v, l):
 
 datacenter = read_input()
 src, dst, graph = build_graph(datacenter)
-n = len(datacenter) * len(datacenter[0])
+n = len(graph)
 # compute the number of verticies (the path length) we have to pass to reach dst
 length = len([v for v in xrange(n) if len(graph[v]) > 0])
 visited = [False] * n
